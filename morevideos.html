@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Lenny's Resume Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Styling for the side-scrolling sections */
+    .side-scroll-section {
+      overflow-x: scroll;
+      white-space: nowrap;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    .side-scroll-item {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 10px;
+      width: 200px;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .side-scroll-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .side-scroll-video {
+      max-width: 400px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .carousel-inner img {
+      object-fit: cover;
+      width: 50%!important;
+      height: 50%!important;
+      margin-left: 25%;
+ /* This maintains the aspect ratio and fills the container */
+  }
+
+  .carousel-inner video {
+      object-fit: cover;
+      width: 50%!important;
+      height: 50%!important;
+      margin-left: 25%;
+ /* This maintains the aspect ratio and fills the container */
+  }
+
+  .page-header {
+    padding: 120px 0 0 0;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: 1vh;
+    background: #000;
+    background-size: cover;
+    position: relative;
+    padding: 10px 0 30px 0;
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+  }
+
+  /* Style for the video element within the wrapper */
+  .video-wrapper video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  </style>
+</head>
+
+<!-- Script to include the header -->
+<script>
+  // Function to fetch and insert the header content
+  function includeHeader() {
+    fetch("header.html")
+      .then(response => response.text())
+      .then(content => {
+        document.getElementById("header-container").innerHTML = content;
+      });
+  }
+
+  // Call the function to include the header on page load
+  includeHeader();
+</script>
+
+<script>
+  // Function to fetch and insert the footer content
+  function includeFooter() {
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(content => {
+        document.getElementById("footer-container").innerHTML = content;
+      });
+  }
+
+  // Call the function to include the footer on page load
+  includeFooter();
+</script>
+
+
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <i class="bi bi-camera"></i>
+        <h1>Lenny</h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown"><a href="#"><span>Projects</span> <i
+                class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="swe.html">Software Engineer</a></li>
+              <li><a href="videography.html">Videographer</a></li>
+              <li><a href="modeling.html">Freelance Model</a></li>
+              <!-- <li class="dropdown"><a href="#"><span>Sub Menu</span> <i
+                    class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="https://www.github.com/lennyqd" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/52lenny" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/lennyqd" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://www.tiktok.com/52lenny" class="tiktok"><i class="bi bi-tiktok"></i></a>
+      </div>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade" data-aos-delay="1500">
+
+    <!-- ======= End Page Header ======= -->
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>More Videos!</h2>
+            <p>Here are more videos I have created!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Header -->
+
+<!-- ======= Video Gallery Section ======= -->
+<section id="video-gallery" class="video-gallery">
+    <div class="container-fluid">
+      <div class="row gy-4 justify-content-center" id="video-gallery-row">
+        <!-- Video Gallery Items will be dynamically added here -->
+      </div>
+    </div>
+  </section><!-- End Video Gallery Section -->
+  
+  <script>
+    // Function to fetch videos from videos.json and generate gallery items
+    function generateVideoGallery() {
+  fetch("videos.json")
+    .then(response => response.json())
+    .then(videos => {
+      const videoGalleryRow = document.getElementById("video-gallery-row");
+
+      videos.forEach(video => {
+        const videoItem = document.createElement("div");
+        videoItem.classList.add("col-lg-4", "col-md-6");
+
+        const videoWrapper = document.createElement("div");
+        videoWrapper.classList.add("gallery-item", "h-100", "video-wrapper");
+
+        const videoElement = document.createElement("video");
+        videoElement.controls = true;
+        videoElement.muted = false;
+        videoElement.volume = 0.3;
+        videoElement.innerHTML = `
+          <source data-src="${video.src}" type="video/mp4">
+          Your browser does not support the video tag.
+        `;
+
+        videoWrapper.appendChild(videoElement);
+        videoItem.appendChild(videoWrapper);
+        videoGalleryRow.appendChild(videoItem);
+
+        // Add an Intersection Observer to lazy load videos
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const source = entry.target.querySelector("source");
+              if (source && !source.src) {
+                source.src = source.getAttribute("data-src");
+                videoElement.load();
+              }
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+
+        observer.observe(videoElement);
+      });
+    });
+}
+
+  
+    // Call the function to generate the video gallery on page load
+    generateVideoGallery();
+
+    // Get the volume control input element
+  const volumeInput = document.getElementById("video-volume");
+
+// Add an event listener to the volume input
+volumeInput.addEventListener("input", () => {
+  const newVolume = volumeInput.value;
+
+  // Loop through all the video elements and update their volume
+  const videoElements = document.querySelectorAll("video");
+  videoElements.forEach(video => {
+    video.volume = newVolume;
+  });
+});
+  </script>
+  
+
+</main><!-- End #main -->
+
+
+<script>
+  function stopVideo(videoElement) {
+    videoElement.pause();
+    videoElement.currentTime = 0;
+  }
+
+  function playNewVideo(videoElement) {
+    videoElement.play();
+  }
+
+  const carouselVideos = document.querySelectorAll('.carousel-item video');
+  let activeVideo = null;
+
+  const indicators = document.querySelectorAll('.carousel-indicators button');
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      if (activeVideo !== null) {
+        stopVideo(activeVideo);
+      }
+      activeVideo = carouselVideos[index];
+      playNewVideo(activeVideo);
+    });
+  });
+</script>
+
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<!-- Initialize Videos Swiper Slider -->
+<script>
+  var videoSwiper = new Swiper('.video-swiper', {
+    navigation: {
+      nextEl: '.video-swiper-button-next',
+      prevEl: '.video-swiper-button-prev',
+    },
+    // Add other Swiper configuration options for videos
+  });
+</script>
+<!-- End Videos Swiper Initialization -->
+
+<!-- Initialize Photos Swiper Slider -->
+<script>
+  var photoSwiper = new Swiper('.photo-swiper', {
+    navigation: {
+      nextEl: '.photo-swiper-button-next',
+      prevEl: '.photo-swiper-button-prev',
+    },
+    // Add other Swiper configuration options for photos
+  });
+</script>
+<!-- End Photos Swiper Initialization -->
+</body>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Lenny Do</span></strong>. All Rights Reserved
+    </div>
+  </div>
+</footer><!-- End Footer -->
+<div id="preloader">
+  <div class="line"></div>
+</div>
+
+
+</html>

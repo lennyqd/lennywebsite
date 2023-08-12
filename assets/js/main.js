@@ -162,4 +162,23 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
+  // Initialize the Swiper slider for photos
+var photoSwiper = new Swiper('.gallery-slider.photo', {
+  // Add your desired photo slider options here
+  // Example:
+  slidesPerView: 3,
+  spaceBetween: 20,
+  // Add more options as needed
+});
+
+// Initialize the Swiper slider for videos
+var videoSwiper = new Swiper('.gallery-slider.video', {
+  // Add your desired video slider options here
+  // Example:
+  slidesPerView: 1,
+  spaceBetween: 20,
+  // Add more options as needed
+});
+
+
 });

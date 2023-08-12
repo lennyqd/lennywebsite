@@ -31,8 +31,36 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<!-- Script to include the header -->
+<script>
+  // Function to fetch and insert the header content
+  function includeHeader() {
+    fetch("header.html")
+      .then(response => response.text())
+      .then(content => {
+        document.getElementById("header-container").innerHTML = content;
+      });
+  }
 
+  // Call the function to include the header on page load
+  includeHeader();
+</script>
+
+<script>
+  // Function to fetch and insert the footer content
+  function includeFooter() {
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(content => {
+        document.getElementById("footer-container").innerHTML = content;
+      });
+  }
+
+  // Call the function to include the footer on page load
+  includeFooter();
+</script>
+
+<body>
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -48,12 +76,12 @@
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="#"><span>Careers</span> <i
+          <li class="dropdown"><a href="#"><span>Projects</span> <i
                 class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="swe.html">Software Engineer</a></li>
-              <li><a href="videography.html">Videography</a></li>
-              <li><a href="modeling.html">Freelance Modeling</a></li>
+              <li><a href="videography.html">Videographer</a></li>
+              <li><a href="modeling.html">Freelance Model</a></li>
               <!-- <li class="dropdown"><a href="#"><span>Sub Menu</span> <i
                     class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
@@ -69,10 +97,10 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-        <a href="www.github.com/lennyqd" class="github"><i class="bi bi-github"></i></a>
-        <a href="www.instagram.com/52lenny" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="www.linkedin.com/lennyqd" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-        <a href="www.tiktok.com/52lenny" class="tiktok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.github.com/lennyqd" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/52lenny" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/lennyqd" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://www.tiktok.com/52lenny" class="tiktok"><i class="bi bi-tiktok"></i></a>
       </div>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
@@ -80,60 +108,62 @@
     </div>
   </header><!-- End Header -->
 
+  <main id="main" data-aos="fade" data-aos-delay="1500"></main>
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade"
     data-aos-delay="100">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-7 text-center">
-          <h2>Welcome! I'm <span>Lenny</span> - Computer Science Graduate based in Atlanta, Georgia</h2>
-          
+          <h2>Welcome! I'm <span>Lenny</span> - Soon to be Computer Science Graduate based in Atlanta, Georgia</h2>
+
           <!-- <p>empty text</p> -->
-          <a href="contact.html" class="btn-get-started">Let's connect!</a>
+          <a href="about.html" class="btn-get-started">Learn More About Me</a>
         </div>
       </div>
     </div>
   </section><!-- End Hero Section -->
-
-  <main id="main" data-aos="fade" data-aos-delay="100">
+  
 
     <!-- ======= Gallery Section ======= -->
-    <p class="text-center hero1">Explore my professional experiences by selecting any image below</p>
+    <p class="text-center hero1">Explore my recent projects by selecting on any of the images down below:</p>
     <section id="gallery" class="gallery">
       <div class="container-fluid">
-
         <div class="row gy-4 justify-content-center">
+
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <p class="text-center">Text in front of the image</p> <!-- Insert your desired text here -->
-              <img src="assets/img/gallery/soft1.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/soft1.jpg" title="" class="glightbox preview-link"><i
-                    class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="gallery-click">
+                <p>Software Engineer</p>
+                <a href="swe.html" class="details-link">
+                  <img src="assets/img/gallery/soft1.jpg" class="img-fluid" alt="">
+                </a>
               </div>
             </div>
-          </div><!-- End Gallery Item -->
+          </div> <!-- End Gallery Item -->
+
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/video1.JPG" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/video1.JPG" title="" class="glightbox preview-link"><i
-                    class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="gallery-click">
+                <p>Videographer</p>
+                <a href="videography.html" class="details-link">
+                  <img src="assets/img/gallery/video1.jpg" class="img-fluid" alt="">
+                </a>
               </div>
             </div>
-          </div><!-- End Gallery Item -->
+          </div> <!-- End Gallery Item -->
+
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/model1.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/model1.jpg" title="" class="glightbox preview-link"><i
-                    class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="gallery-click">
+                <p>Freelance Model</p>
+                <a href="modeling.html" class="details-link">
+                  <img src="assets/img/gallery/model1.jpg" class="img-fluid" alt="">
+                </a>
               </div>
             </div>
-          </div><!-- End Gallery Item -->
+          </div> <!-- End Gallery Item -->
         </div>
       </div>
     </section><!-- End Gallery Section -->
@@ -141,13 +171,8 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Lenny Do</span></strong>. All Rights Reserved
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+  <div id="footer-container"></div>
+  <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
