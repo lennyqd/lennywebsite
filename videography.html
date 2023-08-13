@@ -87,41 +87,12 @@
   </style>
 </head>
 
-<!-- Script to include the header -->
-<script>
-  // Function to fetch and insert the header content
-  function includeHeader() {
-    fetch("header.html")
-      .then(response => response.text())
-      .then(content => {
-        document.getElementById("header-container").innerHTML = content;
-      });
-  }
-
-  // Call the function to include the header on page load
-  includeHeader();
-</script>
-
-<script>
-  // Function to fetch and insert the footer content
-  function includeFooter() {
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(content => {
-        document.getElementById("footer-container").innerHTML = content;
-      });
-  }
-
-  // Call the function to include the footer on page load
-  includeFooter();
-</script>
-
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+      <a href="./" class="logo d-flex align-items-center  me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <i class="bi bi-camera"></i>
@@ -130,14 +101,14 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="./" class="active">Home</a></li>
+          <li><a href="./about">About</a></li>
           <li class="dropdown"><a href="#"><span>Projects</span> <i
                 class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="swe.html">Software Engineer</a></li>
-              <li><a href="videography.html">Videographer</a></li>
-              <li><a href="modeling.html">Freelance Model</a></li>
+              <li><a href="./swe">Software Engineer</a></li>
+              <li><a href="./videography">Videographer</a></li>
+              <li><a href="./modeling">Freelance Model</a></li>
               <!-- <li class="dropdown"><a href="#"><span>Sub Menu</span> <i
                     class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
@@ -148,7 +119,7 @@
               </li> -->
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="./contact">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -241,7 +212,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-7 text-center">
         <!-- <p>empty text</p> -->
-        <a href="moreimages.html" class="btn-get-started">More Images!</a>
+        <a href="./moreimages" class="btn-get-started">More Images!</a>
       </div>
     </div>
   </div>
@@ -282,6 +253,23 @@
       </div>
         <!-- Add more carousel items for additional videos -->
     </div>
+
+    <script>
+      // Get references to the video elements
+      var video1 = document.getElementById("video-1");
+      var video2 = document.getElementById("video-2");
+      var video3 = document.getElementById("video-3");
+      var video4 = document.getElementById("video-4");
+  
+      // Function to change the volume of a video
+      function changeVolume(video, volumeLevel) {
+          video.volume = volumeLevel;
+      }
+  
+      // Example: Change the volume of video-1 to 0.5 (50%)
+      changeVolume(video1, 0.3);
+  </script>
+
     <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -294,7 +282,7 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade"
   data-aos-delay="100">
-  <a href="morevideos.html" class="btn-get-started">More videos!</a>
+  <a href="./morevideos" class="btn-get-started">More videos!</a>
 </section><!-- End Hero Section -->
 
 </main><!-- End #main -->
