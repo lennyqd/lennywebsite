@@ -84,6 +84,57 @@
     position: relative;
     padding: 10px 0 30px 0;
   }
+
+  .video-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+
+/* Update the iframe inside .video-container */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container img {
+  object-fit: cover;
+      width: 50%!important;
+      height: 50%!important;
+      margin-left: 25%;
+}
+
+.video-container video {
+  object-fit: cover;
+      width: 50%!important;
+      height: 50%!important;
+      margin-left: 25%;
+}
+
+.video-container img:hover {
+  opacity: 1;
+}
+
+/* Adjust carousel control positioning */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Adjust carousel control icon styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  /* Add other styling properties if desired */
+}
+
   </style>
 </head>
 
@@ -207,8 +258,7 @@
       </button>
     </div>
       <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade"
-  data-aos-delay="100">
+  <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="100">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-7 text-center">
@@ -217,9 +267,11 @@
       </div>
     </div>
   </div>
+  </section>
 <br>
+<h2 style="margin: 20px; text-align: left;">Videos</h2>
   <div id="videoCarousel" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-    <h2 style="margin: 20px;">Videos</h2>
+
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Video 1"></button>
         <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1" aria-label="Video 2"></button>
@@ -229,17 +281,25 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-          <iframe width= "1080" height= "720" src="https://www.youtube.com/embed/70L60vfGX7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="video-container">
+            <iframe width="711" height="474" src="https://www.youtube.com/embed/70L60vfGX7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
         </div>
         <div class="carousel-item">
-          <iframe width= "1080" height= "720" src="https://www.youtube.com/embed/9JqcOlyK0bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+          <div class="video-container">
+            <iframe width="711" height="474" src="https://www.youtube.com/embed/9JqcOlyK0bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
         </div>
         <div class="carousel-item">
-          <iframe width= "1080" height= "720" src="https://www.youtube.com/embed/9JqcOlyK0bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+          <div class="video-container">
+            <iframe width="711" height="474" src="https://www.youtube.com/embed/KtpCD_ZOWI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
+          </div>
         </div>
         <div class="carousel-item">
-          <iframe width= "1080" height= "720" src="https://www.youtube.com/embed/9JqcOlyK0bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
+          <div class="video-container">
+            <iframe width="711" height="474" src="https://www.youtube.com/embed/43Scx6DNCfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
+          </div>
+        </div>
         <!-- Add more carousel items for additional videos -->
     </div>
 
