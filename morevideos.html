@@ -86,10 +86,13 @@
   }
 
   .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    overflow: hidden;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
   }
 
   /* Style for the video element within the wrapper */
@@ -191,8 +194,10 @@
         videoWrapper.classList.add("gallery-item", "h-100", "video-wrapper");
 
         const videoElement = document.createElement("iframe");
-        iframe.src = `https://www.youtube.com/embed/${video.youtubeId}`;
-        iframe.allowfullscreen = true;
+        videoElement.src = `https://www.youtube.com/embed/${video.youtubeId}`;
+        videoElement.allowfullscreen = true;
+        videoElement.width = "100%"; // Adjust the width as desired
+        videoElement.height = "400"; // Adjust the height as desired
 
         videoWrapper.appendChild(videoElement);
         videoItem.appendChild(videoWrapper);
