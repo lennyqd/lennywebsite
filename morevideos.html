@@ -190,34 +190,13 @@
         const videoWrapper = document.createElement("div");
         videoWrapper.classList.add("gallery-item", "h-100", "video-wrapper");
 
-        const videoElement = document.createElement("video");
-        videoElement.controls = true;
-        videoElement.muted = false;
-        videoElement.volume = 0.3;
-        videoElement.innerHTML = `
-          <source data-src="${video.src}" type="video/mp4">
-          Your browser does not support the video tag.
-        `;
+        const videoElement = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${video.youtubeId}`;
+        iframe.allowfullscreen = true;
 
         videoWrapper.appendChild(videoElement);
         videoItem.appendChild(videoWrapper);
         videoGalleryRow.appendChild(videoItem);
-
-        // Add an Intersection Observer to lazy load videos
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const source = entry.target.querySelector("source");
-              if (source && !source.src) {
-                source.src = source.getAttribute("data-src");
-                videoElement.load();
-              }
-              observer.unobserve(entry.target);
-            }
-          });
-        });
-
-        observer.observe(videoElement);
       });
     });
 }
